@@ -6,5 +6,5 @@ import { ListRoomComponent } from './list-room/list-room.component';
 export const routes: Routes = [
     {path: '', component: DashboardComponent},
     {path: 'add-rooms', component: AddRoomComponent},
-    {path: 'hotel-list', component: ListRoomComponent},
+    {path: 'hotels-list', component: ListRoomComponent},
 ];

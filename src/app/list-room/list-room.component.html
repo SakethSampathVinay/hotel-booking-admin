@@ -1,1 +1,29 @@
-<p>list-room works!</p>
+<div class="main-content">
+  <h1 class="title">Room Listings</h1>
+  <p class="subtitle">
+    View, edit, or manage all listed rooms. Keep the information up-to-date to provide the best experience for users.
+  </p>
+
+  <table class="room-table">
+    <thead>
+      <tr>
+        <th>Hotel Name</th>
+        <th>Room Type</th>
+        <th>Facilities</th>
+        <th>Price / night</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let room of listData">
+        <td>{{ room.hotelName }}</td>
+        <td>{{ room.roomType }}</td>
+        <td>{{ room.amenities?.join(', ') }}</td>
+        <td>₹{{ room.pricePerNight }}</td>
+        <td>
+          <button class="delete-btn" (click)="deleteHotel(room._id.$oid)">❌</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
