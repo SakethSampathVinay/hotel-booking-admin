@@ -1,0 +1,140 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Container */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8); /* Tailwind: bg-white/80 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Tailwind: shadow-md */
+  backdrop-filter: blur(10px); /* Tailwind: backdrop-blur-lg */
+  z-index: 999;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937; /* Tailwind: text-gray-700 */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Tailwind: gap-8 */
+}
+.navbar-li {
+  font-size: 1rem;
+  color: #1f2937;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar-li:hover {
+  color: #000;
+}
+.navbar-li::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #1f2937;
+  transition: width 0.3s ease-in-out;
+}
+.navbar-li:hover::after {
+  width: 100%;
+}
+
+/* Button */
+.navbar-button {
+  padding: 8px 20px;
+  border-radius: 9999px; /* Tailwind: rounded-full */
+  border: 1px solid #1f2937;
+  background-color: transparent;
+  font-size: 0.875rem; /* Tailwind: text-sm */
+  font-weight: 300; /* Tailwind: font-light */
+  color: #1f2937;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.navbar-button:hover {
+  background-color: #f3f4f6; /* Tailwind: hover:bg-gray-100 */
+}
+
+/* Hamburger Icon */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+.navbar-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #1f2937;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 998;
+  transition: left 0.3s ease-in-out;
+}
+.mobile-menu a,
+.mobile-menu button {
+  font-size: 1.2rem;
+  color: #1f2937;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.mobile-menu.show {
+  left: 0;
+}
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,26 @@
+<div class="navbar-container">
+  <h1 routerLink="/" class="navbar-logo">EasyStay Admin</h1>
+
+  <ul class="navbar-links" [class.active]="menuOpen">
+    <li routerLink="/" class="navbar-li" (click)="closeMenu()">Dashboard</li>
+    <li routerLink="/add-rooms" class="navbar-li" (click)="closeMenu()">
+      Add Room
+    </li>
+    <li routerLink="/hotel-listing" class="navbar-li" (click)="closeMenu()">
+      List Room
+    </li>
+  </ul>
+
+  <div class="navbar-toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<div class="mobile-menu" [class.show]="menuOpen">
+  <button class="close-button" (click)="closeMenu()">✖</button>
+  <a routerLink="/" (click)="closeMenu()">Dashboard</a>
+  <a routerLink="/add-rooms" (click)="closeMenu()">Add Room</a>
+  <a routerLink="/hotel-listing" (click)="closeMenu()">List Room</a>
+</div>

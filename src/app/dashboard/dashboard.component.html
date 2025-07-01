@@ -1,0 +1,45 @@
+<div class="dashboard-container">
+  <div class="dashboard-header">
+    <h1>Dashboard</h1>
+    <p>
+      Monitor your room listings, track bookings and analyze revenue—all in one place.
+    </p>
+  </div>
+
+  <div class="summary-cards">
+    <div class="summary-card">
+      <h3>Total Bookings</h3>
+      <div class="value">{{ total_bookings }}</div>
+    </div>
+    <div class="summary-card">
+      <h3>Total Revenue</h3>
+      <div class="value">$ {{ total_amount }}</div>
+    </div>
+  </div>
+
+  <table class="bookings-table">
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>Hotel Name</th>
+        <th>Total Amount</th>
+        <th>Payment Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings_list">
+        <td>{{ booking.user_name }}</td>
+        <td>{{ booking.hotel_name }}</td>
+        <td>$ {{ booking.amount }}</td>
+        <td>
+          <span class="status" [ngClass]="{
+            'completed': booking.payment_status === 'Completed',
+            'pending': booking.payment_status === 'Pending'
+          }">
+            {{ booking.payment_status }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
