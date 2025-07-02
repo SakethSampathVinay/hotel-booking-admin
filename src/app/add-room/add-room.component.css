@@ -1,81 +1,126 @@
 .add-room-container {
   max-width: 600px;
-  margin: auto;
+  margin: 3rem auto;
   padding: 2rem;
+  background-color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  margin-top: 100px;
 }
 
-h2 {
-  font-size: 1.8rem;
+.add-room-container h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
+  color: #111827;
 }
 
 .description {
   margin-bottom: 1.5rem;
-  color: #555;
+  color: #4b5563;
+  font-size: 0.95rem;
 }
 
 .images-row {
   display: flex;
   justify-content: space-between;
-  gap: 0.5rem;
+  gap: 0.75rem;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .upload-box {
   width: 100px;
   height: 100px;
-  border: 2px dashed #ccc;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
+  background-color: #f9fafb;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  position: relative;
+  font-size: 0.85rem;
   text-align: center;
-  font-size: 0.9rem;
+  color: #6b7280;
 }
 
 .upload-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  background-color: #fff;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #6366f1;
 }
 
 .form-row {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-}
-
-select,
-input[type='number'] {
-  flex: 1;
-  padding: 0.5rem;
-  margin-right: 1rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .amenities {
   margin-bottom: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.75rem;
 }
 
 .amenities label {
+  background-color: #f3f4f6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #374151;
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.95rem;
+}
+
+.amenities input[type="checkbox"] {
+  accent-color: #6366f1;
 }
 
 button {
   padding: 0.6rem 1.5rem;
-  background-color: #007bff;
+  background-color: #6366f1;
   color: white;
+  font-size: 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4f46e5;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .upload-box {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
 }

@@ -75,7 +75,6 @@ export class AddRoomComponent {
     this.addHotel.addHotels(formDataToSend).subscribe({
       next: (res) => {
         console.log('Room added:', res);
-        // Reset form
         this.formData = {
           hotelName: '',
           streetAddress: '',

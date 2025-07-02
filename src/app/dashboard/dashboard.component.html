@@ -28,18 +28,19 @@
     </thead>
     <tbody>
       <tr *ngFor="let booking of bookings_list">
-        <td>{{ booking.user_name }}</td>
-        <td>{{ booking.hotel_name }}</td>
-        <td>$ {{ booking.amount }}</td>
-        <td>
+        <td data-label="User Name">{{ booking.user_name }}</td>
+        <td data-label="Hotel Name">{{ booking.hotel_name }}</td>
+        <td data-label="Total Amount">$ {{ booking.amount }}</td>
+        <td data-label="Payment Status">
           <span class="status" [ngClass]="{
-            'completed': booking.payment_status === 'Completed',
-            'pending': booking.payment_status === 'Pending'
-          }">
+      'completed': booking.payment_status === 'Completed',
+      'pending': booking.payment_status === 'Pending'
+    }">
             {{ booking.payment_status }}
           </span>
         </td>
       </tr>
+
     </tbody>
   </table>
 </div>

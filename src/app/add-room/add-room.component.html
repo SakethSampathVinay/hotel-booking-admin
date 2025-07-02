@@ -1,7 +1,6 @@
 <div class="add-room-container">
   <h2>Add Hotel</h2>
   <p class="description">Fill in the details carefully and accurate room details, pricing, and amenities to enhance the user booking experience.</p>
-
   <div class="images-row">
     <label class="upload-box" *ngFor="let i of [0, 1, 2, 3]">
       <input type="file" (change)="onImageSelected($event, i)" hidden />
@@ -9,9 +8,7 @@
       <span *ngIf="!previewImages[i]">Upload</span>
     </label>
   </div>
-
   <input type="text" [(ngModel)]="formData.hotelName" placeholder="Hotel Name" />
-
   <div class="form-row">
     <select [(ngModel)]="formData.roomType">
       <option value="" disabled>Select Room Type</option>
@@ -22,15 +19,11 @@
 
     <input type="number" [(ngModel)]="formData.pricePerNight" placeholder="Price /night" />
   </div>
-
-  <!-- Amenities -->
   <div class="amenities">
     <label *ngFor="let amenity of allAmenities">
       <input type="checkbox" [value]="amenity" (change)="toggleAmenity($event)" />
       {{ amenity }}
     </label>
   </div>
-
-  <!-- Add Button -->
   <button (click)="addHotels()">Add Room</button>
 </div>
