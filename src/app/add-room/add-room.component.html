@@ -9,6 +9,7 @@
     </label>
   </div>
   <input type="text" [(ngModel)]="formData.hotelName" placeholder="Hotel Name" />
+  <input type="text" [(ngModel)]="formData.streetAddress" placeholder="Street Address" />
   <div class="form-row">
     <select [(ngModel)]="formData.roomType">
       <option value="" disabled>Select Room Type</option>
@@ -16,7 +17,6 @@
       <option value="Double Bed">Double Bed</option>
       <option value="Suite">Suite</option>
     </select>
-
     <input type="number" [(ngModel)]="formData.pricePerNight" placeholder="Price /night" />
   </div>
   <div class="amenities">
