@@ -4,6 +4,14 @@ The **Admin Panel** is a web interface for administrators to manage hotel listin
 
 ---
 
+## 🔗 Repositories
+
+- 🌐 **User Frontend** – [Main User App](https://github.com/SakethSampathVinay/hotel-booking-frontend)
+- 🛠 **Admin Panel** – [Admin Dashboard](https://github.com/SakethSampathVinay/hotel-booking-admin)
+- 🔙 **Backend** – [Flask API + MongoDB](https://github.com/SakethSampathVinay/hotel-booking-backend)
+
+---
+
 ## 📌 Description
 
 This Angular-based Admin Panel is part of the EasyStay full-stack hotel booking platform. It connects with the Flask backend to perform admin-level CRUD operations on hotels. It is built with clean UI components and supports secure access via JWT.
